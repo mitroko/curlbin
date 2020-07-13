@@ -1,0 +1,11 @@
+[uwsgi]
+socket = 127.0.0.1:9090
+uid = w3curlbin
+gid = nobody
+wsgi-file = /var/uwsgi/curlbin/curlbin.py
+vhost = True
+processes = 4
+threads = 2
+plugins = logfile, python
+req-logger = file:/var/log/uwsgi/curlbin/access.log
+logger = file:/var/log/uwsgi/curlbin/error.log

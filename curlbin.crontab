@@ -1,0 +1,1 @@
+*/15 * * * *   find /var/spool/curlbin/ -type f -mtime 7 -delete

@@ -1,0 +1,18 @@
+upstream curlbin {
+  server 127.0.0.1:9090;
+} 
+
+server {
+
+  server_name curlbin.tk;
+
+  client_max_body_size 32M;
+
+  location / {
+    include uwsgi_params;
+    uwsgi_request_buffering off;
+    uwsgi_buffering off;
+    uwsgi_pass curlbin;
+  }
+
+}
