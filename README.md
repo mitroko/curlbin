@@ -1,9 +1,9 @@
 # curlbin
 
 # Usage examples
-ls -1 | curl -i --upload-file - https://l.stremki.net  
-curl -i --upload-file ./somefile https://l.stremki.net  
-alias curlbin='curl -i --upload-file - https://l.stremki.net'  
+ls -1 | curl -i --upload-file - https://sbin.tk  
+curl -i --upload-file ./somefile https://sbin.tk  
+alias curlbin='curl -i --upload-file - https://sbin.tk'  
 ls -1 | curlbin  
 
 # TODO
