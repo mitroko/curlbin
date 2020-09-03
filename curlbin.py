@@ -52,7 +52,10 @@ def return_code(response,file_id):
 
 def return_data(response,url_f):
 
-  if get_magic(url_f)[0:10] == 'ASCII text':
+  if get_magic(url_f)[0:10] == 'ASCII text' or \
+     get_magic(url_f)[0:18] == 'UTF-8 Unicode text' or \
+     get_magic(url_f) == 'unified diff output, ASCII text' or \
+     get_magic(url_f)[0:25] == 'Bourne-Again shell script':
     ct = 'text/plain'
   else:
     ct = 'application/octet-stream'
