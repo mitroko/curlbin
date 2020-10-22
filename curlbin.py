@@ -53,9 +53,11 @@ def return_code(response,file_id):
 def return_data(response,url_f):
 
   if get_magic(url_f)[0:10] == 'ASCII text' or \
+     get_magic(url_f) == 'HTML document, ASCII text' or \
      get_magic(url_f)[0:18] == 'UTF-8 Unicode text' or \
      get_magic(url_f) == 'unified diff output, ASCII text' or \
-     get_magic(url_f)[0:25] == 'Bourne-Again shell script':
+     get_magic(url_f)[0:25] == 'Bourne-Again shell script' or \
+     get_magic(url_f)[0:36] == 'Python script, ASCII text executable':
     ct = 'text/plain'
   else:
     ct = 'application/octet-stream'
